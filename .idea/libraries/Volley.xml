@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Volley">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/map2d/libs/Volley.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

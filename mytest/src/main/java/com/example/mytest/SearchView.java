@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
@@ -36,10 +37,11 @@ public class SearchView extends View implements View.OnClickListener
 		//context.obtainStyledAttributes(attrs,R.styleable)
 		paint.setColor(Color.parseColor("#55ffffff"));
 		paint.setStyle(Paint.Style.FILL);
-		this.setOnClickListener(this);
+		//this.setOnClickListener(this);
 		bitmap1 = BitmapFactory.decodeResource(getResources(), R.mipmap.bus);
 		bitmap2 = BitmapFactory.decodeResource(getResources(), R.mipmap.man);
 	}
+
 
 	int measureOwn(boolean isWidth, int spec)
 	{
@@ -78,6 +80,27 @@ public class SearchView extends View implements View.OnClickListener
 	}
 
 	@Override
+	public boolean onTouchEvent(MotionEvent event)
+	{
+
+		//return super.onTouchEvent(event);
+		if (event.getAction() == MotionEvent.ACTION_UP)
+		{
+
+
+			if (status == CLOSE_STATUS)
+			{
+				if (event.getX() > height)
+				{
+					return false;
+				}
+			}
+			onClick(this);
+		}
+		return true;
+	}
+
+	@Override
 	protected void onDraw(Canvas canvas)
 	{
 		paint.setColor(Color.parseColor("#55ffffff"));
@@ -88,13 +111,13 @@ public class SearchView extends View implements View.OnClickListener
 		canvas.drawRoundRect(rect, getHeight() / 2, getHeight() / 2, paint);
 		paint.setColor(Color.GREEN);
 		//canvas.drawCircle(width - getHeight() / 2, getHeight() / 2, getHeight() / 2, paint);
-		rect.set(width-getHeight(),0,width,getHeight());
-		if(width>getHeight())
+		rect.set(width - getHeight(), 0, width, getHeight());
+		if (width > getHeight())
 		{
-			canvas.drawBitmap(bitmap1,null, rect,null);
-		}else
+			canvas.drawBitmap(bitmap1, null, rect, null);
+		} else
 		{
-			canvas.drawBitmap(bitmap2,null, rect,null);
+			canvas.drawBitmap(bitmap2, null, rect, null);
 		}
 
 	}
