@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\mapDemo\\android_studio\\NaviDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\whiteborder.xml",
+        "source": "D:\\mapDemo\\android_studio\\NaviDemo\\res\\drawable\\whiteborder.xml"
+    },
+    {
+        "merged": "D:\\mapDemo\\android_studio\\NaviDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\border.xml",
+        "source": "D:\\mapDemo\\android_studio\\NaviDemo\\res\\drawable\\border.xml"
+    },
+    {
+        "merged": "D:\\mapDemo\\android_studio\\NaviDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\startborder.xml",
+        "source": "D:\\mapDemo\\android_studio\\NaviDemo\\res\\drawable\\startborder.xml"
+    },
+    {
+        "merged": "D:\\mapDemo\\android_studio\\NaviDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\whitenooutborder.xml",
+        "source": "D:\\mapDemo\\android_studio\\NaviDemo\\res\\drawable\\whitenooutborder.xml"
+    },
+    {
+        "merged": "D:\\mapDemo\\android_studio\\NaviDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\pressednooutborder.xml",
+        "source": "D:\\mapDemo\\android_studio\\NaviDemo\\res\\drawable\\pressednooutborder.xml"
+    },
+    {
+        "merged": "D:\\mapDemo\\android_studio\\NaviDemo\\build\\intermediates\\res\\merged\\debug\\drawable\\whitedownborder.xml",
+        "source": "D:\\mapDemo\\android_studio\\NaviDemo\\res\\drawable\\whitedownborder.xml"
+    }
+]

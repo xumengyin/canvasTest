@@ -1,0 +1,2 @@
+include ':mytest'
+include 'locateDemo', 'map2d'

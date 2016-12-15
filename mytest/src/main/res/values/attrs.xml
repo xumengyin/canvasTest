@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CView_test">
+        <attr name="bgColor" format="color"/>
+        <attr name="forColor" format="color"/>
+        <attr name="cricleWidth" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="RollTextView">
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+</resources>
