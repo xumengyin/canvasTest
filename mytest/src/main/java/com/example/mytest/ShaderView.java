@@ -7,6 +7,7 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.util.AttributeSet;
@@ -30,7 +31,7 @@ public class ShaderView extends View
 
 	public ShaderView(Context context, AttributeSet attrs)
 	{
-		this(context, attrs,0);
+		this(context, attrs, 0);
 	}
 
 	private void init()
@@ -46,7 +47,10 @@ public class ShaderView extends View
 	}
 
 	int cricleX = -1, cricley = 1;
-
+	Path path1 = new Path();
+	int tempHValue=30;
+	int tempVValue=45;
+	int tempVValue2=35;
 	@Override
 	protected void onDraw(Canvas canvas)
 	{
@@ -56,23 +60,32 @@ public class ShaderView extends View
 		{
 			mBgBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
 			Canvas bgCanvas = new Canvas(mBgBitmap);
-			bgCanvas.drawBitmap(mBitmap,null,new RectF(0,0,getWidth(),getHeight()), mShaderPaint);
+			bgCanvas.drawBitmap(mBitmap, null, new RectF(0, 0, getWidth(), getHeight()), mShaderPaint);
 			mShaderPaint.setShader(new BitmapShader(mBgBitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT));
 		}
 		if (cricleX != -1)
 		{
-			canvas.drawCircle(cricleX,cricley,100,mShaderPaint);
-
+			path1.reset();
+			//canvas.drawCircle(cricleX, cricley, 100, mShaderPaint);
+			path1.moveTo(cricleX,cricley-tempVValue2);
+			path1.quadTo(cricleX-tempHValue,cricley-tempVValue-tempVValue2,cricleX-2*tempHValue,cricley-tempVValue2);
+			//path1.quadTo();
+			//path1.quadTo(cricleX-tempHValue,);
+			path1.lineTo(cricleX,cricley+tempVValue);
+			path1.lineTo(cricleX+2*tempHValue,cricley-tempVValue2);
+			path1.quadTo(cricleX+tempHValue,cricley-tempVValue-tempVValue2,cricleX,cricley-tempVValue2);
+			path1.close();
+			canvas.drawPath(path1,mShaderPaint);
 		}
 	}
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event)
 	{
-		if(event.getAction()==MotionEvent.ACTION_DOWN||event.getAction()==MotionEvent.ACTION_MOVE)
+		if (event.getAction() == MotionEvent.ACTION_DOWN || event.getAction() == MotionEvent.ACTION_MOVE)
 		{
-			cricleX= (int) event.getX();
-			cricley= (int) event.getY();
+			cricleX = (int) event.getX();
+			cricley = (int) event.getY();
 			invalidate();
 		}
 		return true;
