@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 /**
- * Created by Administrator on 2016/12/15.   testcommit
+ * Created by Administrator on 2016/12/15.   testcommitfffff
  */
 public class SearchView extends View implements View.OnClickListener
 {
