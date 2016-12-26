@@ -33,4 +33,7 @@ proguard/
 captures/  
   
 # Intellij  
-*.iml  
+*.iml
+/gradle/
+mytest/libs/
+mytest/src/main/jni/

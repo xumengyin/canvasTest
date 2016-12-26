@@ -14,6 +14,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import javax.net.ssl.HttpsURLConnection;
+
 /**
  * Created by Administrator on 2016/12/16.
  */
@@ -27,6 +29,7 @@ public class ShaderView extends View
 	{
 		super(context, attrs, defStyleAttr);
 		init();
+		//HttpsURLConnection
 	}
 
 	public ShaderView(Context context, AttributeSet attrs)

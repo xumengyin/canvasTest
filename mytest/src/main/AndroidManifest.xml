@@ -33,15 +33,24 @@
         <!-- <activity android:name=".CviewActivity"></activity> -->
         <!-- <activity android:name=".ConfigActivity"></activity> -->
         <!-- <activity android:name=".AniActivity"></activity> -->
-        <activity android:name=".CviewActivity">
+        <!--<activity android:name=".CviewActivity">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN"/>-->
+
+        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!-- <activity android:name=".RecycleViewActivity"> -->
+        <!-- </activity> -->
+        <activity android:name=".PortAndLandActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-      <!--  <activity android:name=".RecycleViewActivity">-->
-        <!--</activity>-->
     </application>
 
 </manifest>
