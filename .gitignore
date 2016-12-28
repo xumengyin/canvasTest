@@ -35,5 +35,3 @@ captures/
 # Intellij  
 *.iml
 /gradle/
-mytest/libs/
-mytest/src/main/jni/

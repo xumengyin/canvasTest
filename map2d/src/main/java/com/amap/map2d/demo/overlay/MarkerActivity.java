@@ -100,7 +100,6 @@ public class MarkerActivity extends Activity implements OnMarkerClickListener,
 	protected void onResume() {
 		super.onResume();
 		mapView.onResume();
-		AMap
 	}
 
 	/**
